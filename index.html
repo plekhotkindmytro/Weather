@@ -8,7 +8,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="img/weather-icons-master/css/weather-icons.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -18,49 +17,41 @@
     <input type="hidden" id="userLatitude" value="">
     <input type="hidden" id="userLongitude" value="">
 
-
-
     <div class="container">
         <div class="row">
-            <div class="col-sm-10 offset-sm-1">
-                <h1 class="display-4">Weather in your location</h1>
-                <button id="getWeather" type="button" class="btn btn-success btn-lg"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            <div class="col-sm-12">
+                <header class="text-center mb-3">
+                    <h1>Weather in your local area</h1>
+                </header>
+            </div>
+        </div>
+        <div class="container-inner">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 id="location"></h4>
+                    <div id="day-time"></div>
+                    <div id="weather-summary"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="temperature-wrapper">
+                        <canvas id="weather-icon" width="50" height="50"></canvas>
+                        <span id="temperature"></span>
+                        <sup id="temperature-units"><a id="fahrenheit" href="javascript:void(0);" class="inactive-link">°F</a> | <a id="celsius" href="javascript:void(0);" class="inactive-link">°C</a></sup>
+                    </div>
+                </div>
+                <div class="col-sm-5 mt-3">
+                    <div><span id="precipitation"></span></div>
+                    <div><span id="humidity"></span></div>
+                    <div><span id="wind"></span><span id="wind-units"></span></div>
+                </div>
+            </div>
 
-                <figure class="icons">
-                    <canvas id="clear-day" width="50" height="50">
-        </canvas>
-
-                    <canvas id="clear-night" width="50" height="50">
-        </canvas>
-
-                    <canvas id="partly-cloudy-day" width="50" height="50">
-        </canvas>
-
-                    <canvas id="partly-cloudy-night" width="50" height="50">
-        </canvas>
-
-                    <canvas id="cloudy" width="50" height="50">
-        </canvas>
-
-                    <canvas id="rain" width="50" height="50">
-        </canvas>
-
-                    <canvas id="sleet" width="50" height="50">
-        </canvas>
-
-                    <canvas id="snow" width="50" height="50">
-        </canvas>
-
-                    <canvas id="wind" width="50" height="50">
-        </canvas>
-
-                    <canvas id="fog" width="50" height="50">
-        </canvas>
-                </figure>
-                <i class="wi wi-night-sleet" style="font-size:5rem"></i>
-
-                <img src="img/amcharts_weather_icons_1.0.0/animated/snowy-5.svg" width="200" height="200">
-
+        </div>
+        <div class="row">
+            <div class="col-sm-12 mt-1">
+                <footer id="powered-by"></footer>
             </div>
         </div>
     </div>
@@ -73,21 +64,11 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
     <script src="js/skycons.js"></script>
-    <script>
-        var icons = new Skycons(),
-            list = [
-                "clear-day", "clear-night", "partly-cloudy-day",
-                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                "fog"
-            ],
-            i;
-        for (i = list.length; i--;)
-            icons.set(list[i], list[i]);
-        icons.play();
+    <script src="js/main.js"></script>
 
-    </script>
+
+
     <script src="js/load.js"></script>
 </body>
 

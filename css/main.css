@@ -2,13 +2,54 @@ html,
 body {
     height: 100%;
     width: 100%;
-}
-
-.container {
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+}
+
+body {
+    background-color: #222;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header {
+    color: white;
+}
+
+.container {
+    width: 576px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container-inner {
+    background-color: #fff;
+    padding: 2em 2em;
+}
+
+.inactive-link {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+}
+
+#temperature-units {
+    font-size: 1rem;
+    top: -2rem;
+    display: none;
+}
+
+#temperature {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+#powered-by {
+    height: 64px;
+    background: url("https://darksky.net/dev/img/attribution/poweredby-darkbackground.png") no-repeat center right;
+    background-size: contain;
 }
