@@ -2,9 +2,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body {
@@ -14,9 +11,16 @@ body {
     background-size: cover;
 }
 
-
 header {
     color: white;
+}
+
+.content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {

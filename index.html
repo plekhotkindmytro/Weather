@@ -8,50 +8,51 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="img/weather-icons-master/css/weather-icons.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-    <input type="hidden" id="userLatitude" value="">
-    <input type="hidden" id="userLongitude" value="">
+    <div class="content-wrapper">
+        <input type="hidden" id="userLatitude" value="">
+        <input type="hidden" id="userLongitude" value="">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <header class="text-center mb-3">
-                    <h1>Weather in your local area</h1>
-                </header>
-            </div>
-        </div>
-        <div class="container-inner">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4 id="location"></h4>
-                    <div id="day-time"></div>
-                    <div id="weather-summary"></div>
+                    <header class="text-center mb-3">
+                        <h1>Weather in your local area</h1>
+                    </header>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-7">
-                    <div id="temperature-wrapper">
-                        <canvas id="weather-icon" width="50" height="50"></canvas>
-                        <span id="temperature"></span>
-                        <sup id="temperature-units"><a id="fahrenheit" href="javascript:void(0);" class="inactive-link">°F</a> | <a id="celsius" href="javascript:void(0);" class="inactive-link">°C</a></sup>
+            <div class="container-inner">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 id="location"></h4>
+                        <div id="day-time"></div>
+                        <div id="weather-summary"></div>
                     </div>
                 </div>
-                <div class="col-sm-5 mt-3">
-                    <div><span id="precipitation"></span></div>
-                    <div><span id="humidity"></span></div>
-                    <div><span id="wind"></span><span id="wind-units"></span></div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div id="temperature-wrapper">
+                            <canvas id="weather-icon" width="50" height="50"></canvas>
+                            <span id="temperature"></span>
+                            <sup id="temperature-units"><a id="fahrenheit" href="javascript:void(0);" class="inactive-link">°F</a> | <a id="celsius" href="javascript:void(0);" class="inactive-link">°C</a></sup>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 mt-3">
+                        <div><span id="precipitation"></span></div>
+                        <div><span id="humidity"></span></div>
+                        <div><span id="wind"></span><span id="wind-units"></span></div>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="row">
-            <div class="col-sm-12 mt-1">
-                <footer id="powered-by"></footer>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mt-1">
+                    <footer id="powered-by"></footer>
+                </div>
             </div>
         </div>
     </div>
